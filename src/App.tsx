@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { Moon, Sun } from "lucide-react";
+import { ArrowUpRight, Instagram, Moon, Sun } from "lucide-react";
 
 import Navbar from "./components/Navbar";
 import MobileNavbar from "./components/MobileNavbar";
@@ -9,12 +9,7 @@ import Lightbox from "./components/Lightbox";
 import SiteMotionBackground from "./components/SiteMotionBackground";
 import ScrollIndicator from "./components/ScrollIndicator";
 
-import {
-  footerContent,
-  heroContent,
-  intro,
-  sections,
-} from "./data/portfolio";
+import { footerContent, heroContent, intro, sections } from "./data/portfolio";
 import { useLocale } from "./hooks/useLocale";
 import { useTheme } from "./hooks/useTheme";
 import type { Locale } from "./types";
@@ -96,6 +91,36 @@ export default function App() {
   const { theme, toggleTheme } = useTheme();
   const [lightbox, setLightbox] = useState<LightboxState>(null);
   const shouldReduceMotion = useReducedMotion();
+  const footerCopy =
+    locale === "zh"
+      ? {
+          sectionLabel: "Elsewhere",
+          title: "查看更多作品",
+          socialLinks: [
+            {
+              label: "Instagram",
+              href: "https://www.instagram.com/daburu.tw/",
+            },
+            {
+              label: "CodePen",
+              href: "https://codepen.io/collection/yyNZdE",
+            },
+          ],
+        }
+      : {
+          sectionLabel: "Elsewhere",
+          title: "More Works",
+          socialLinks: [
+            {
+              label: "Instagram",
+              href: "https://www.instagram.com/daburu.tw/",
+            },
+            {
+              label: "CodePen",
+              href: "https://codepen.io/collection/yyNZdE",
+            },
+          ],
+        };
 
   const handleOpenLightbox = (
     images: string[],
@@ -175,7 +200,7 @@ export default function App() {
                   <br />
                   2D Illustration,
                   <br />
-                  3D Visuals
+                  3D Visual / Animation
                 </motion.h1>
                 <motion.p
                   variants={heroItemVariants}
@@ -249,13 +274,43 @@ export default function App() {
           ))}
         </div>
 
-        {/* <footer id="contact" className="py-10">
-          <div className="flex flex-col gap-4 border-t border-zinc-200 pt-6 text-sm dark:border-white/10 md:flex-row md:items-center md:justify-between">
-            <div className="text-center text-zinc-400 dark:text-white/30">
+        <footer id="contact" className="py-10 md:py-14">
+          <div className="relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white/80 p-6 dark:border-white/10 dark:bg-white/[0.03] md:p-8">
+            <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div className="space-y-2">
+                <p className="text-xs uppercase tracking-[0.24em] text-zinc-400 dark:text-white/30">
+                  {footerCopy.sectionLabel}
+                </p>
+                <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-white md:text-3xl">
+                  {footerCopy.title}
+                </h2>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {footerCopy.socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-2 text-xs font-medium text-zinc-700 transition hover:border-[#AF5F3C]/30 hover:bg-[#AF5F3C]/8 hover:text-zinc-900 dark:border-white/10 dark:bg-white/[0.03] dark:text-white/75 dark:hover:border-white/20 dark:hover:bg-white/[0.06] dark:hover:text-white"
+                  >
+                    {link.label === "Instagram" ? (
+                      <Instagram size={14} />
+                    ) : (
+                      <ArrowUpRight size={14} />
+                    )}
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative mt-6 border-t border-zinc-200/80 pt-4 text-xs text-zinc-400 dark:border-white/10 dark:text-white/30">
               {footerContent.copyright}
             </div>
           </div>
-        </footer> */}
+        </footer>
       </main>
 
       <AnimatePresence>

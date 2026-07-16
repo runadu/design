@@ -1,4 +1,10 @@
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from "motion/react";
+import { useState } from "react";
 
 import type { ThemeMode } from "../types";
 
@@ -14,30 +20,43 @@ export default function ScrollIndicator({ theme }: ScrollIndicatorProps) {
     mass: 0.3,
   });
 
-  const thumbTop = useTransform(progress, [0, 1], ["1.5%", "98.5%"]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const isDark = theme === "dark";
-  const dashColor = isDark ? "rgba(255,255,255,0.18)" : "rgba(24,24,27,0.16)";
+  const segments = 8;
+  const dashColor = isDark ? "bg-white/18" : "bg-zinc-900/16";
+  const activeDashColor = isDark ? "bg-white/82" : "bg-zinc-900/70";
+
+  useMotionValueEvent(progress, "change", (value) => {
+    const nextIndex = Math.round(value * (segments - 1));
+    setActiveIndex((currentIndex) =>
+      currentIndex === nextIndex ? currentIndex : nextIndex,
+    );
+  });
 
   return (
     <div className="pointer-events-none fixed right-4 top-1/2 z-40 hidden w-6 -translate-y-1/2 items-center justify-center md:flex">
-      <div className="relative h-[55vh] max-h-60 min-h-20 w-full">
-        <div
-          className="absolute inset-y-0 left-1/2 w-[7px] -translate-x-1/2"
-          style={{
-            backgroundImage: `repeating-linear-gradient(to bottom, transparent 0 11px, ${dashColor} 11px 14px, transparent 14px 28px)`,
-            maskImage:
-              "linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
-          }}
-        />
+      <div className="flex h-[55vh] max-h-60 min-h-24 w-full flex-col items-center justify-between py-3">
+        {Array.from({ length: segments }, (_, index) => {
+          const isActive = index === activeIndex;
 
-        <motion.div
-          style={{ top: thumbTop }}
-          className={`absolute left-1/2 h-[3px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full ${
-            isDark ? "bg-white/82" : "bg-zinc-900/70"
-          }`}
-        />
+          return (
+            <motion.div
+              key={index}
+              animate={{
+                opacity: isActive ? 1 : 0.9,
+                scaleX: isActive ? 1.25 : 1,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 320,
+                damping: 26,
+              }}
+              className={`h-[4px] rounded-full ${
+                isActive ? activeDashColor : dashColor
+              } ${isActive ? "w-[12px]" : "w-[10px]"}`}
+            />
+          );
+        })}
       </div>
     </div>
   );

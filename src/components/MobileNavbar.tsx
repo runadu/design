@@ -39,9 +39,9 @@ export default function MobileNavbar({
                 </h1>
               </a>
 
-              <p className="text-sm text-zinc-600 dark:text-white/60">
-                UI/UX Designer
-              </p>
+              {/* <p className="text-sm text-zinc-600 dark:text-white/60">
+                Design Portfolio
+              </p> */}
 
               {description && (
                 <p className="max-w-[36ch] text-sm leading-6 text-zinc-500 dark:text-white/45">

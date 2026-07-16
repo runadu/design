@@ -22,21 +22,21 @@ export const navItems: NavItem[] = [
     label: "About",
   },
   {
-    href: "#Else",
-    label: "Visual / Animation",
+    href: "#3D",
+    label: "3D Artworks",
+  },
+  {
+    href: "#2D",
+    label: "2D Artworks",
   },
   {
     href: "#webUIUX",
     label: "Web UI/UX",
   },
-  {
-    href: "#gameUI",
-    label: "Game UI",
-  },
-  {
-    href: "#frontend",
-    label: "Web Development",
-  },
+  // {
+  //   href: "#webDev",
+  //   label: "Web Development",
+  // },
 ];
 
 export const intro: IntroData = {
@@ -92,71 +92,14 @@ export const footerContent: FooterContent = {
 
 const sectionData: SectionData[] = [
   {
-    id: "Else",
+    id: "3D",
     title: {
-      zh: "Visual / Animation",
-      en: "Visual / Animation",
+      zh: "3D Artworks",
+      en: "3D Artworks",
     },
     items: [
       {
-        id: "visual-1",
-        title: {
-          zh: "2D 繪畫",
-          en: "2D Illustration",
-        },
-        year: "2021-2025",
-        description: {
-          zh: "角色與場景的 2D 繪圖創作。",
-          en: "A selection of 2D illustration work centered on character and scene.",
-        },
-        tags: {
-          zh: ["2D Illustration", "角色與場景", "Photoshop", "procreate"],
-          en: [
-            "2D Illustration",
-            "Character Design",
-            "Scene Illustration",
-            "Photoshop",
-            "procreate",
-          ],
-        },
-        images: [
-          "/imgs/2d-illustration-1.PNG",
-          "/imgs/2d-illustration-2.PNG",
-          "/imgs/2d-illustration-3.PNG",
-          "/imgs/2d-illustration-4.png",
-          "/imgs/2d-illustration-5.png",
-        ],
-        links: [
-          {
-            label: { zh: "查看更多 Instagram", en: "More on Instagram" },
-            url: "https://www.instagram.com/daburu.tw/",
-          },
-        ],
-      },
-      {
-        id: "visual-2",
-        title: {
-          zh: "繪本創作",
-          en: "Illustrated Book Project",
-        },
-        year: "2020",
-        description: {
-          zh: "以台南司法博物館為靈感延伸的繪本創作，著重角色、場景與敘事氛圍的視覺表現。",
-          en: "An illustrated book project inspired by the Tainan Judicial Museum, focused on character, scene, and narrative atmosphere.",
-        },
-        tags: {
-          zh: ["繪本創作", "角色與場景", "敘事視覺", "Photoshop"],
-          en: [
-            "Illustrated Book",
-            "Character Design",
-            "Scene Illustration",
-            "Visual Storytelling",
-          ],
-        },
-        images: ["/imgs/2d-1.webp", "/imgs/2d-2.webp", "/imgs/2d-3.webp"],
-      },
-      {
-        id: "visual-3",
+        id: "3d-1",
         title: {
           zh: "3D 動畫片段",
           en: "3D Animation Clips",
@@ -167,10 +110,34 @@ const sectionData: SectionData[] = [
           en: "A selection of 3D animation clips covering rigging, performance, editing, and post-production effects.",
         },
         tags: {
-          zh: ["3D Animation", "Blender", "After Effects", "動態剪輯"],
+          zh: ["3D Animation", "Blender"],
           en: ["3D Animation", "Blender", "After Effects", "Animation Editing"],
         },
         video: "/videos/file.mp4",
+      },
+      {
+        id: "3d-2",
+        title: {
+          zh: "3D Artworks",
+          en: "3D Artworks",
+        },
+        year: "2020 - 2022",
+        description: {
+          zh: "3D 建模",
+          en: "3D Artworks.",
+        },
+        tags: {
+          zh: ["Blender", "Subtance Painter", "ZBrush", "Photoshop"],
+          en: ["Blender", "Subtance Painter", "ZBrush", "Photoshop"],
+        },
+        images: [
+          "/imgs/3d-1.webp",
+          "/imgs/3d-2.webp",
+          "/imgs/3d-3.webp",
+          "/imgs/3d-4.webp",
+          "/imgs/3d-5.webp",
+          "/imgs/3d-6.webp",
+        ],
       },
     ],
   },
@@ -266,17 +233,17 @@ const sectionData: SectionData[] = [
     ],
   },
   {
-    id: "gameUI",
+    id: "2D",
     title: {
-      zh: "Game UI",
-      en: "Game UI",
+      zh: "2D Arkworks",
+      en: "2D Arkworks",
     },
     items: [
       {
-        id: "game-1",
+        id: "2D-1",
         title: {
-          zh: "手機遊戲 UI 練習",
-          en: "Mobile Game UI Concepts",
+          zh: "Game UI 練習",
+          en: "Game UI Concepts",
         },
         year: "2024",
         description: {
@@ -301,111 +268,133 @@ const sectionData: SectionData[] = [
           "/imgs/game-ui-5.JPG",
         ],
       },
-    ],
-  },
-  {
-    id: "frontend",
-    title: {
-      zh: "Web Development",
-      en: "Web Development",
-    },
-    items: [
       {
-        id: "web-1",
+        id: "2D-2",
         title: {
-          zh: "台灣鑄造學會官網",
-          en: "Taiwan Foundry Society Website",
+          zh: "繪本創作",
+          en: "Illustrated Book Project",
         },
-        year: "2025",
+        year: "2020",
         description: {
-          zh: "負責網站介面規劃，整合購物車、結帳、會員與多語系內容需求，建立更完整的瀏覽與轉換流程。",
-          en: "Planned the website interface around cart, checkout, membership, and multilingual content, shaping a clearer browsing and conversion flow.",
+          zh: "以台南司法博物館為靈感延伸的繪本創作，著重角色、場景與敘事氛圍的視覺表現。",
+          en: "An illustrated book project inspired by the Tainan Judicial Museum, focused on character, scene, and narrative atmosphere.",
         },
         tags: {
-          zh: ["網站 UI 設計", "購物流程", "會員體驗", "多語系介面", "RWD"],
+          zh: ["繪本創作", "角色與場景", "敘事視覺", "Photoshop"],
           en: [
-            "Website UI Design",
-            "Purchase Flow",
-            "Member Experience",
-            "Multilingual Interface",
-            "Responsive Design",
+            "Illustrated Book",
+            "Character Design",
+            "Scene Illustration",
+            "Visual Storytelling",
           ],
         },
-        images: ["/imgs/dev-2.png"],
-        links: [
-          {
-            label: { zh: "查看網站", en: "View Site" },
-            url: "https://www.foundry.org.tw/",
-          },
-        ],
-      },
-      {
-        id: "web-2",
-        title: {
-          zh: "石化產業媒合平台",
-          en: "Petrochemical Industry Matching Platform",
-        },
-        year: "2025",
-        description: {
-          zh: "優化平台互動體驗與操作流暢度，補強無障礙與鍵盤操作細節，提升整體可用性。",
-          en: "Refined the platform interaction flow and usability, including accessibility and keyboard-navigation improvements.",
-        },
-        tags: {
-          zh: ["UX 優化", "無障礙設計", "鍵盤操作", "可用性改善"],
-          en: [
-            "UX Enhancements",
-            "Accessibility",
-            "Keyboard Navigation",
-            "Usability Improvements",
-          ],
-        },
-        images: ["/imgs/dev-3.png"],
-        links: [
-          {
-            label: { zh: "查看網站", en: "View Site" },
-            url: "https://sps.isafe.org.tw/",
-          },
-        ],
-      },
-      {
-        id: "web-3",
-        title: {
-          zh: "承鋒鑄造型錄網站",
-          en: "Cheng Feng Casting Catalog Website",
-        },
-        year: "2025",
-        description: {
-          zh: "規劃型錄網站的版面、元件與內容呈現方式，讓產品資訊與多語系瀏覽更清楚一致。",
-          en: "Handled layout planning, component design, and multilingual content presentation for a catalog-style website.",
-        },
-        tags: {
-          zh: [
-            "型錄網站",
-            "版型規劃",
-            "元件設計",
-            "內容展示",
-            "多語系介面",
-            "響應式設計",
-          ],
-          en: [
-            "Catalog Website",
-            "Layout Planning",
-            "Component Design",
-            "Content Presentation",
-            "Multilingual Interface",
-            "Responsive Design",
-          ],
-        },
-        images: ["/imgs/dev-1.png"],
-        links: [
-          {
-            label: { zh: "查看網站", en: "View Site" },
-            url: "https://www.chengfeng.com.tw/",
-          },
-        ],
+        images: ["/imgs/2d-1.webp", "/imgs/2d-2.webp", "/imgs/2d-3.webp"],
       },
     ],
   },
+  // {
+  //   id: "webDev",
+  //   title: {
+  //     zh: "Web Development",
+  //     en: "Web Development",
+  //   },
+  //   items: [
+  //     {
+  //       id: "web-1",
+  //       title: {
+  //         zh: "台灣鑄造學會官網",
+  //         en: "Taiwan Foundry Society Website",
+  //       },
+  //       year: "2025",
+  //       description: {
+  //         zh: "負責網站介面規劃，整合購物車、結帳、會員與多語系內容需求，建立更完整的瀏覽與轉換流程。",
+  //         en: "Planned the website interface around cart, checkout, membership, and multilingual content, shaping a clearer browsing and conversion flow.",
+  //       },
+  //       tags: {
+  //         zh: ["網站 UI 設計", "購物流程", "會員體驗", "多語系介面", "RWD"],
+  //         en: [
+  //           "Website UI Design",
+  //           "Purchase Flow",
+  //           "Member Experience",
+  //           "Multilingual Interface",
+  //           "Responsive Design",
+  //         ],
+  //       },
+  //       images: ["/imgs/dev-2.png"],
+  //       links: [
+  //         {
+  //           label: { zh: "查看網站", en: "View Site" },
+  //           url: "https://www.foundry.org.tw/",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: "web-2",
+  //       title: {
+  //         zh: "石化產業媒合平台",
+  //         en: "Petrochemical Industry Matching Platform",
+  //       },
+  //       year: "2025",
+  //       description: {
+  //         zh: "優化平台互動體驗與操作流暢度，補強無障礙與鍵盤操作細節，提升整體可用性。",
+  //         en: "Refined the platform interaction flow and usability, including accessibility and keyboard-navigation improvements.",
+  //       },
+  //       tags: {
+  //         zh: ["UX 優化", "無障礙設計", "鍵盤操作", "可用性改善"],
+  //         en: [
+  //           "UX Enhancements",
+  //           "Accessibility",
+  //           "Keyboard Navigation",
+  //           "Usability Improvements",
+  //         ],
+  //       },
+  //       images: ["/imgs/dev-3.png"],
+  //       links: [
+  //         {
+  //           label: { zh: "查看網站", en: "View Site" },
+  //           url: "https://sps.isafe.org.tw/",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: "web-3",
+  //       title: {
+  //         zh: "承鋒鑄造型錄網站",
+  //         en: "Cheng Feng Casting Catalog Website",
+  //       },
+  //       year: "2025",
+  //       description: {
+  //         zh: "規劃型錄網站的版面、元件與內容呈現方式，讓產品資訊與多語系瀏覽更清楚一致。",
+  //         en: "Handled layout planning, component design, and multilingual content presentation for a catalog-style website.",
+  //       },
+  //       tags: {
+  //         zh: [
+  //           "型錄網站",
+  //           "版型規劃",
+  //           "元件設計",
+  //           "內容展示",
+  //           "多語系介面",
+  //           "響應式設計",
+  //         ],
+  //         en: [
+  //           "Catalog Website",
+  //           "Layout Planning",
+  //           "Component Design",
+  //           "Content Presentation",
+  //           "Multilingual Interface",
+  //           "Responsive Design",
+  //         ],
+  //       },
+  //       images: ["/imgs/dev-1.png"],
+  //       links: [
+  //         {
+  //           label: { zh: "查看網站", en: "View Site" },
+  //           url: "https://www.chengfeng.com.tw/",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 export const sections: SectionData[] = sectionData.map((section) => ({
