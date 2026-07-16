@@ -142,6 +142,66 @@ const sectionData: SectionData[] = [
     ],
   },
   {
+    id: "2D",
+    title: {
+      zh: "2D Arkworks",
+      en: "2D Arkworks",
+    },
+    items: [
+      {
+        id: "2D-1",
+        title: {
+          zh: "Game UI 練習",
+          en: "Game UI Concepts",
+        },
+        year: "2024",
+        description: {
+          zh: "以外星、節奏與 RPG 世界觀為主題，探索手機遊戲介面在視覺節奏、資訊層級與操作感受上的平衡。",
+          en: "A set of mobile game UI concepts exploring the balance of visual rhythm, information hierarchy, and interaction across sci-fi, rhythm, and RPG themes.",
+        },
+        tags: {
+          zh: ["Game UI", "HUD 設計", "資訊層級", "介面風格", "視覺節奏"],
+          en: [
+            "Game UI",
+            "HUD Design",
+            "Information Hierarchy",
+            "Interface Style",
+            "Visual Rhythm",
+          ],
+        },
+        images: [
+          "/imgs/game-ui-1.JPG",
+          "/imgs/game-ui-2.JPG",
+          "/imgs/game-ui-3.JPG",
+          "/imgs/game-ui-4.JPG",
+          "/imgs/game-ui-5.JPG",
+        ],
+      },
+      {
+        id: "2D-2",
+        title: {
+          zh: "繪本創作",
+          en: "Illustrated Book Project",
+        },
+        year: "2020",
+        description: {
+          zh: "以台南司法博物館為靈感延伸的繪本創作，著重角色、場景與敘事氛圍的視覺表現。",
+          en: "An illustrated book project inspired by the Tainan Judicial Museum, focused on character, scene, and narrative atmosphere.",
+        },
+        tags: {
+          zh: ["繪本創作", "角色與場景", "敘事視覺", "Photoshop"],
+          en: [
+            "Illustrated Book",
+            "Character Design",
+            "Scene Illustration",
+            "Visual Storytelling",
+          ],
+        },
+        images: ["/imgs/2d-1.webp", "/imgs/2d-2.webp", "/imgs/2d-3.webp"],
+      },
+    ],
+  },
+  {
     id: "webUIUX",
     title: {
       zh: "Web UI/UX",
@@ -229,66 +289,6 @@ const sectionData: SectionData[] = [
           ],
         },
         images: ["/imgs/ui-3-1.png"],
-      },
-    ],
-  },
-  {
-    id: "2D",
-    title: {
-      zh: "2D Arkworks",
-      en: "2D Arkworks",
-    },
-    items: [
-      {
-        id: "2D-1",
-        title: {
-          zh: "Game UI 練習",
-          en: "Game UI Concepts",
-        },
-        year: "2024",
-        description: {
-          zh: "以外星、節奏與 RPG 世界觀為主題，探索手機遊戲介面在視覺節奏、資訊層級與操作感受上的平衡。",
-          en: "A set of mobile game UI concepts exploring the balance of visual rhythm, information hierarchy, and interaction across sci-fi, rhythm, and RPG themes.",
-        },
-        tags: {
-          zh: ["Game UI", "HUD 設計", "資訊層級", "介面風格", "視覺節奏"],
-          en: [
-            "Game UI",
-            "HUD Design",
-            "Information Hierarchy",
-            "Interface Style",
-            "Visual Rhythm",
-          ],
-        },
-        images: [
-          "/imgs/game-ui-1.JPG",
-          "/imgs/game-ui-2.JPG",
-          "/imgs/game-ui-3.JPG",
-          "/imgs/game-ui-4.JPG",
-          "/imgs/game-ui-5.JPG",
-        ],
-      },
-      {
-        id: "2D-2",
-        title: {
-          zh: "繪本創作",
-          en: "Illustrated Book Project",
-        },
-        year: "2020",
-        description: {
-          zh: "以台南司法博物館為靈感延伸的繪本創作，著重角色、場景與敘事氛圍的視覺表現。",
-          en: "An illustrated book project inspired by the Tainan Judicial Museum, focused on character, scene, and narrative atmosphere.",
-        },
-        tags: {
-          zh: ["繪本創作", "角色與場景", "敘事視覺", "Photoshop"],
-          en: [
-            "Illustrated Book",
-            "Character Design",
-            "Scene Illustration",
-            "Visual Storytelling",
-          ],
-        },
-        images: ["/imgs/2d-1.webp", "/imgs/2d-2.webp", "/imgs/2d-3.webp"],
       },
     ],
   },
