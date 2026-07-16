@@ -4,7 +4,17 @@ import type {
   IntroData,
   NavItem,
   SectionData,
+  WorkItem,
 } from "../types";
+
+const resolveAssetPath = (assetPath: string) =>
+  `${import.meta.env.BASE_URL}${assetPath.replace(/^\/+/, "")}`;
+
+const resolveWorkItemAssets = (item: WorkItem): WorkItem => ({
+  ...item,
+  images: item.images?.map(resolveAssetPath),
+  video: item.video ? resolveAssetPath(item.video) : undefined,
+});
 
 export const navItems: NavItem[] = [
   {
@@ -80,7 +90,7 @@ export const footerContent: FooterContent = {
   copyright: "© 2026 All rights reserved.",
 };
 
-export const sections: SectionData[] = [
+const sectionData: SectionData[] = [
   {
     id: "Else",
     title: {
@@ -397,3 +407,8 @@ export const sections: SectionData[] = [
     ],
   },
 ];
+
+export const sections: SectionData[] = sectionData.map((section) => ({
+  ...section,
+  items: section.items.map(resolveWorkItemAssets),
+}));
