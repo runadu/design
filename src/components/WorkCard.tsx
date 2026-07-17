@@ -52,7 +52,7 @@ export default function WorkCard({
             </h5>
 
             {description && (
-              <p className="max-w-[58ch] text-sm leading-7 text-zinc-600 dark:text-white/65">
+              <p className="text-sm leading-7 text-zinc-600 dark:text-white/65">
                 {description}
               </p>
             )}
@@ -63,7 +63,9 @@ export default function WorkCard({
               {tags.map((tag) => (
                 <motion.span
                   key={tag}
-                  whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
+                  whileHover={
+                    shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }
+                  }
                   transition={{ duration: 0.2 }}
                   className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1 text-[12px] text-zinc-600 dark:border-white/10 dark:bg-white/[0.03] dark:text-white/60"
                 >
@@ -87,7 +89,9 @@ export default function WorkCard({
                   href={link.url}
                   target="_blank"
                   rel="noreferrer"
-                  whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.03 }}
+                  whileHover={
+                    shouldReduceMotion ? undefined : { y: -2, scale: 1.03 }
+                  }
                   whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                   transition={{ duration: 0.2 }}
                   className="
@@ -111,7 +115,9 @@ export default function WorkCard({
             <motion.button
               type="button"
               onClick={() => onOpenLightbox(item.images!, 0, title)}
-              whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }}
+              whileHover={
+                shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }
+              }
               whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
               transition={{ duration: 0.22 }}
               className="overflow-hidden rounded-xl border border-zinc-200 text-left dark:border-white/10"
@@ -141,7 +147,9 @@ export default function WorkCard({
                   <motion.img
                     src={img}
                     alt={`${title} ${index + 1}`}
-                    whileHover={shouldReduceMotion ? undefined : { scale: 1.06 }}
+                    whileHover={
+                      shouldReduceMotion ? undefined : { scale: 1.06 }
+                    }
                     transition={{ duration: 0.3 }}
                     className="aspect-square h-full w-full object-cover"
                   />
