@@ -5,6 +5,9 @@ import { defineConfig } from "vite";
 export default defineConfig(({ mode }) => {
   return {
     base: "/design/",
+    build: {
+      outDir: "docs",
+    },
     plugins: [react(), tailwindcss()],
   };
 });

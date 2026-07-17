@@ -31,7 +31,8 @@ npm run dev
 這個專案已經包含 GitHub Pages 的 Actions workflow：
 
 - 推到 `main` 會自動 build 並部署
-- 部署來源是 `dist/`
+- 建置輸出是 `docs/`
+- Actions 上傳與部署來源是 `docs/`
 
 Repo 端還需要確認：
 
